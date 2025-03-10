@@ -27,7 +27,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
      <div className="flex items-start">
       {/* left side bar with option add job,manage jobs , view applications */}
-        <div className="inline-block min-h-screen  border-r-2 border-gray-200 shadow-xl ">
+        <div className="inline-block min-h-screen  border-r-2 border-gray-200 shadow-xl  bg-[#ffbc42]  ">
          <ul className="flex flex-col items-start pt-10">
             <NavLink className={({isActive}) => `flex items-center p-5 sm:px-6 hover:bg-gray-100 gap-2 w-full ${isActive && 'bg-blue-100 border-r-4 border-blue-500'} `} to={'/dashboard/add-job'}  >
             <img className="min-w-4" src="/src/assets/add_icon.svg" alt="" />
