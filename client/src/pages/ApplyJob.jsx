@@ -93,28 +93,31 @@ const ApplyJob = () => {
                 className="rich-text "
                 dangerouslySetInnerHTML={{ __html: JobData.description }}
               ></div>
-              <button className="bg-blue-600 text-white px-6 py-1.5 rounded hover:bg-blue-700 mt-10">
+              <button className="bg-blue-600 text-white px-6 py-1.5 rounded
+               hover:bg-blue-700 mt-10">
                 Apply Now
               </button>
             </div>
             {/*Right section More jobs */}
             <div className="w-full lg:w-1/3 mt-8 lg:mt-0 lg:ml-8 space-y-4 ">
               <h2>More Jobs from {JobData.companyId.name}</h2>
-              {jobs.filter(job => job.companyId._id === JobData.companyId._id && job._id !== JobData._id).slice(0, 3).map((job, index) => (
+              {jobs.filter(job => job.companyId._id === JobData.companyId._id &&
+               job._id !== JobData._id).slice(0, 3).map((job, index) => (
                   <JobCard key={index} job={job} />
                 ))}
+              </div>
             </div>
+           </div>
           </div>
+         {/* Footer */}
+        <Footer/>
+      </>
+      ) : (
+       <div>
+         <Loading />
         </div>
-      </div>
-      {/* Footer */}
-      <Footer/>
-    </>
-  ) : (
-    <div>
-      <Loading />
-    </div>
-  );
-};
+      );
+    };
 
 export default ApplyJob;
+ 

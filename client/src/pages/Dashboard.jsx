@@ -46,7 +46,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
          </ul>
         </div>
 
-        <div>
+        <div style={{backgroundImage: "url('/src/assets/bg-img1.jpg')"}} className="w-full h-screen bg-cover bg-center bg-no-repeat ">
          <Outlet />
         </div>
      </div>

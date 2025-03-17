@@ -1,8 +1,12 @@
 import { manageJobsData } from "../assets/assets"
 import moment from "moment"
+import { useNavigate } from "react-router-dom"
 
 
 const ManageJobs = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="container mx-auto p-6">
       <div className="overflow-x-auto">
@@ -34,8 +38,8 @@ const ManageJobs = () => {
         </table>
       </div>
 
-      <div className="flex justify-end">
-        <button className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg text-white  hover:bg-gradient-to-br  px-4 py-2 rounded mt-5 ">
+      <div className="flex justify-start">
+        <button onClick={() => navigate("/dashboard/add-job")} className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg text-white  hover:bg-gradient-to-br  px-4 py-2 rounded mt-5 ">
           Add new job
         </button>
       </div>

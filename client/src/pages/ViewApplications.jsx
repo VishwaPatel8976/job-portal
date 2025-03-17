@@ -20,22 +20,22 @@ const ViewApplications = () => {
             {viewApplicationsPageData.map((applicant,index)=>(
               
               <tr key={index} className="text-gray-700">
-                <td className="py-2 px-4 border-b text-center">{index+1} </td>
-                <td className="py-2 px-4 border-b text-center">
+                <td className="py-2 px-4 border-b border-gray-300 text-center">{index+1} </td>
+                <td className="py-2 px-4 text-center border-b border-gray-300  flex items-center ">
                   <img className="w-10 h-10 rounded-full mr-3 max-sm:hidden" src={applicant.imgSrc} alt="" />
-                  <span>{applicant.name}</span>
+                  <span className="max-sm:pt-4 max-sm:pb-2">{applicant.name}</span>
                 </td>
-                  <td  className="py-2 px-4 border-b max-sm:hidden">
+                  <td  className="py-2 px-4 border-b border-gray-300  max-sm:hidden">
                   {applicant.jobTitle}</td>
-                  <td className="py-2 px-4 border-b max-sm:hidden">{applicant.location}</td>
-                  <td className="py-2 px-4 border-b text-center">
+                  <td className="py-2 px-4 border-b border-gray-300  max-sm:hidden">{applicant.location}</td>
+                  <td className="py-2 px-4 border-b border-gray-300  text-center">
                     <a href="" target="_blank"
-                    className="text-blue-500 hover:text-blue-800 bg-white inline-flex  items-center px-3 py-2 rounded-lg">
-                      Resume <img src="/src/assets/resume_download_icon.svg" alt="" />
+                    className="text-blue-600 hover:text-blue-800 bg-blue-50 inline-flex  items-center px-3 py-1 rounded-lg">
+                      Resume <img className="w-4 h-4 m-2  text-blue-500 hover:bg-blue-200" src="/src/assets/resume_download_icon.svg" alt="" />
                     </a>
                   </td>
 
-                  <td className="py-2 px-4 border-b text-center relative">
+                  <td className="py-2 px-4 border-b border-gray-300  text-center relative">
                     <div className="realative inline-block text-left group">
                       <button className="text-gray-600 action-button">...</button>
                     <div className="hidden group-hover:block absolute z-10 right-0 md:left-0 top-0 mt-3 w-32 bg-white shadow-md border-1 border-blue-100 rounded-md ">

@@ -4,7 +4,6 @@ import { jobsApplied } from "../assets/assets";
 import moment from "moment";
 import Footer from "../components/Footer";
 
-
 const Applications = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [resume,setResume] = useState(null);
@@ -26,7 +25,8 @@ const Applications = () => {
             </>
            : 
             <div className="flex gap-5">
-              <a className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg text-white  hover:bg-gradient-to-br  px-4 py-1.5 rounded" href="">Resume</a>
+              <a className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 
+              shadow-lg text-white  hover:bg-gradient-to-br  px-4 py-1.5 rounded" href="">Resume</a>
               <button  onClick={() => setIsEdit(true)} className= "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300  text-gray-700  hover:bg-gradient-to-br border border-gray-300 px-4 py-1.5 rounded">Edit</button>
             </div>
           }
@@ -53,7 +53,9 @@ const Applications = () => {
                   <td className="max-sm:hidden">{job.location}</td>
                   <td className="max-sm:hidden">{moment(job.date).format("ll") }</td>
                   <td>
-                    <div className={`w-25 px-2 py-1.5 flex justify-center text-white ${job.status === "Accepted" ? "bg-green-400" : job.status === "Pending"? "bg-blue-400" : "bg-red-400"} rounded`}>
+                    <div className={`w-25 px-2 py-1.5 flex justify-center text-white
+                       ${job.status === "Accepted" ? "bg-green-400" : job.status === "Pending"?
+                        "bg-blue-400" : "bg-red-400"} rounded`}>
                     {job.status}
                     </div>
                     {/* {job.status} */}
