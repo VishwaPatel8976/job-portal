@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import * as Sentry from "@sentry/node";
+import { clerkWebhooks } from './controllers/webhooks.js'
 // Load env variables
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
+app.post('/webhooks',clerkWebhooks)
 
 //port
 const PORT = process.env.PORT;
