@@ -29,11 +29,9 @@ export const getCompanyPostedJobs = async (req,res) => {
 
 //Change Job Application status
 export const changeJobApplicationStatus = async (req,res) => {
-
 }
 
 //change job visibility
 
 export const changeVisibility = async (req,res) => {
-
 }
